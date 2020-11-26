@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: MusicList(),
       routes: {
-        MusicDetails.routeName: (context) => MusicDetails(), //Detail Screen
-        MusicList.routeName: (context) => MusicList(), //Main Screen
+        MusicDetails.routeName: (context) => MusicDetails(),
+        MusicList.routeName: (context) => MusicList(),
       },
     );
   }

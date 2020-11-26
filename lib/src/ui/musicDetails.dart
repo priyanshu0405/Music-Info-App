@@ -9,15 +9,10 @@ class MusicDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final trackID = ModalRoute.of(context)
-        .settings
-        .arguments; //Getting trackID from Track list.
-    connectivityBloc
-        .connectivityStatus(); //Function Call to sink connectivity status to stream
-    musicDetailsbloc.fetchMusicDetails(
-        trackID: trackID); //Function Call to sink Second Api data to stream
-    musicDetailsbloc.fetchLyrics(
-        trackID: trackID); //Function Call to sink Third API data to stream
+    final trackID = ModalRoute.of(context).settings.arguments;
+    connectivityBloc.connectivityStatus();
+    musicDetailsbloc.fetchMusicDetails(trackID: trackID);
+    musicDetailsbloc.fetchLyrics(trackID: trackID);
     return Scaffold(
       backgroundColor: Color(0xFF090917),
       appBar: AppBar(
